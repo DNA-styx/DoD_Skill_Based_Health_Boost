@@ -33,7 +33,7 @@ This SourceMod plugin for **Day of Defeat: Source** gives players a **health boo
 | CVAR | Default | Description |
 |------|---------|-------------|
 | dod_skill_hp | 200 | Health applied to players below the skill threshold |
-| dod_skill_max | 20000 | Maximum HLStats skill to qualify for boost |
+| dod_skill_max | 1000 | Maximum HLStats skill to qualify for boost |
 | dod_skill_debug | 1 | Enable debug logging (1 = on, 0 = off) |
 
 - CVARs are **created automatically** on first run.  
@@ -54,18 +54,19 @@ Debug and boost events appear in the log if `dod_skill_debug` is enabled.
 Example log entries:
 ```
 [REQUEST] HLStats query for DNA.styx (13) returned 1  
-[RESPONSE] HLStats skill for DNA.styx (13): 17033  
-[BOOST] DNA.styx (13) | skill=17033 <= 20000 | health=200  
+[RESPONSE] HLStats skill for DNA.styx (13): 1000  
+[BOOST] DNA.styx (13) | skill=1000 <= 1100 | health=200  
 ```
 ---
 
 ## Installation
 
-1. Ensure **HLStatsX API** is installed and running.  
+2. Copy `hlstatsx_api.smx` to `addons/sourcemod/plugins/`.  
 2. Copy `dod_skill_health_boost.smx` to `addons/sourcemod/plugins/`.  
-3. Start or restart the server.  
-4. The plugin will auto-create `.cfg` and `.log` on first run.  
+3. Restart the map or server.  
+4. The plugin will auto-create `.cfg` on first run.  
 5. Adjust CVARs as needed via RCON or the `.cfg` file.  
+6. The plugin will auto-create `.log` once enabled.  
 
 ---
 
