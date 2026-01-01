@@ -42,7 +42,7 @@ This SourceMod plugin for **Day of Defeat: Source** gives players a **health boo
 **Example usage via RCON:**
 ```
 sm_cvar dod_skill_hp 250
-sm_cvar dod_skill_max 15000
+sm_cvar dod_skill_max 1000
 sm_cvar dod_skill_debug 1
 ```
 
